@@ -8,11 +8,12 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.yuyakaido.android.gram.R;
 import com.yuyakaido.android.gram.model.InstagramMedia;
 import com.yuyakaido.android.gram.network.InstagramNetwork;
-import com.yuyakaido.android.gram.R;
 import com.yuyakaido.android.gram.ui.adapter.InstagramMediaGridAdapter;
 import com.yuyakaido.android.gram.ui.dialog.InstagramAuthenticationDialog;
+import com.yuyakaido.android.gram.util.SharedPreferencesUtil;
 
 import java.util.ArrayList;
 import java.util.List;

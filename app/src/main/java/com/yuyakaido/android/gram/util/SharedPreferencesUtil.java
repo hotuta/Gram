@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
