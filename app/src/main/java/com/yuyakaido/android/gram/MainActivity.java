@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -15,7 +16,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity
-        implements InstagramAuthenticationDialog.InstagramAuthenticationCallback {
+        implements InstagramAuthenticationDialog.InstagramAuthenticationCallback,
+                   AdapterView.OnItemClickListener {
 
     private static final String SP_KEY_INSTAGRAM_ACCESS_TOKEN = "SP_KEY_INSTAGRAM_ACCESS_TOKEN";
 
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity
         adapter = new InstagramMediaGridAdapter(this, new ArrayList<InstagramMedia>());
         gridView = (GridView) findViewById(R.id.activity_main_grid_view);
         gridView.setAdapter(adapter);
+        gridView.setOnItemClickListener(this);
 
         String accessToken = SharedPreferencesUtil.getString(this, SP_KEY_INSTAGRAM_ACCESS_TOKEN);
         if (accessToken == null) {
@@ -54,6 +57,12 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(MainActivity.this, accessToken, Toast.LENGTH_SHORT).show();
         authenticateButton.setVisibility(View.GONE);
         fetchInstagramMedias(accessToken);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        InstagramMedia instagramMedia = adapter.getItem(position);
+        startActivity(PreviewMediaActivity.createIntent(this, instagramMedia));
     }
 
     private void fetchInstagramMedias(String accessToken) {

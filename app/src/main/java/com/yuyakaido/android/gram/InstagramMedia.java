@@ -1,9 +1,11 @@
 package com.yuyakaido.android.gram;
 
+import java.io.Serializable;
+
 /**
  * Created by yuyakaido on 2/27/16.
  */
-public class InstagramMedia {
+public class InstagramMedia implements Serializable {
 
     public String instagramMediaId;
 
