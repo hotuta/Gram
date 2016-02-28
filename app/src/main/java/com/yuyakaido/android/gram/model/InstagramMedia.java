@@ -7,7 +7,7 @@ import java.io.Serializable;
  */
 public class InstagramMedia implements Serializable {
 
-    public String instagramMediaId;
+    public String id;
 
     public String thumbnailUrl;
 

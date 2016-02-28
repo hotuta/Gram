@@ -17,7 +17,7 @@ public class InstagramMediaConverter {
         List<InstagramMedia> instagramMedias = new ArrayList<>();
         for (InstagramMediaResponse response : recentMediaResponse.data) {
             InstagramMedia instagramMedia = new InstagramMedia();
-            instagramMedia.instagramMediaId = response.id;
+            instagramMedia.id = response.id;
             Map<String, InstagramMediaResponse.InstagramImageResponse> images = response.images;
             instagramMedia.thumbnailUrl = images.get("thumbnail").url;
             instagramMedia.lowResolutionUrl = images.get("low_resolution").url;

@@ -4,12 +4,9 @@ import com.yuyakaido.android.gram.model.InstagramMedia;
 
 import java.util.List;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
-import retrofit2.http.Query;
 import rx.Observable;
 import rx.functions.Func1;
 
@@ -18,12 +15,9 @@ import rx.functions.Func1;
  */
 public class InstagramNetwork {
 
-    private static final String BASE_URL = "https://api.instagram.com/v1/";
-
     public static Observable<List<InstagramMedia>> getRecentMedia(String accessToken) {
         InstagramService service = new Retrofit.Builder()
-                .client(new OkHttpClient())
-                .baseUrl(BASE_URL)
+                .baseUrl("https://api.instagram.com/v1/")
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
@@ -35,13 +29,6 @@ public class InstagramNetwork {
                         return InstagramMediaConverter.convert(recentMediaResponse);
                     }
                 });
-    }
-
-    public interface InstagramService {
-
-        @GET("users/self/media/recent")
-        Observable<RecentMediaResponse> getRecentMedia(@Query("access_token") String accessToken);
-
     }
 
 }
