@@ -6,7 +6,7 @@
 
 今回のハンズオンでは、自分がInstagramに投稿した画像一覧をグリッドで表示して、タップすると拡大表示されるアプリを実装することを目標とします。
 
-TODO: GIF画像の追加
+![Sample](https://raw.githubusercontent.com/yuyakaido/Gram/master/sample.gif)
 
 ## 概要
 
