@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.ui.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.yuyakaido.android.gram.model.InstagramMedia;
+import com.yuyakaido.android.gram.network.InstagramNetwork;
+import com.yuyakaido.android.gram.R;
+import com.yuyakaido.android.gram.ui.adapter.InstagramMediaGridAdapter;
+import com.yuyakaido.android.gram.ui.dialog.InstagramAuthenticationDialog;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.yuyakaido.android.gram.model.InstagramMedia;
+import com.yuyakaido.android.gram.R;
 
 import java.util.List;
 

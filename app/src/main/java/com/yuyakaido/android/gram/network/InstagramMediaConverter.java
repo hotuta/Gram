@@ -1,4 +1,6 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.network;
+
+import com.yuyakaido.android.gram.model.InstagramMedia;
 
 import java.util.ArrayList;
 import java.util.List;

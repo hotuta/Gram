@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

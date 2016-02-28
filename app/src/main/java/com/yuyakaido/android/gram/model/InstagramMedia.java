@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.yuyakaido.android.gram.model.InstagramMedia;
+import com.yuyakaido.android.gram.R;
 
 /**
  * Created by yuyakaido on 2/28/16.

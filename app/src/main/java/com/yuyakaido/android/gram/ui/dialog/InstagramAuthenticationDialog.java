@@ -1,4 +1,4 @@
-package com.yuyakaido.android.gram;
+package com.yuyakaido.android.gram.ui.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -16,6 +16,8 @@ import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.yuyakaido.android.gram.R;
 
 /**
  * Created by yuyakaido on 12/26/15.
