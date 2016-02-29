@@ -255,6 +255,22 @@ APIからのデータ取得処理が実装できたので、次は画面に表�
 </RelativeLayout>
 ```
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.yuyakaido.android.gram.ui.view.SquareImageView
+        android:id="@+id/item_instagram_media_grid_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
+```
+
 `GridView`に設定するための`Adapter`も作成します。
 
 ```java
