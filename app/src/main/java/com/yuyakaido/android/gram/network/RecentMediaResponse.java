@@ -1,7 +1,6 @@
 package com.yuyakaido.android.gram.network;
 
 import com.google.gson.annotations.SerializedName;
-import com.yuyakaido.android.gram.network.InstagramMediaResponse;
 
 import java.util.List;
 
