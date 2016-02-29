@@ -344,8 +344,7 @@ gridView.setAdapter(adapter);
 `MainActivity`の`onInstagramAuthenticationCompleted()`にて、先ほど作成した`InstagramNetwork`を使って画像一覧を取得して、結果を`GridView`に表示します。
 
 ```java
-    @Override
-    public void onInstagramAuthenticationCompleted(String accessToken) {
+    private void fetchInstagramMedias(String accessToken) {
         InstagramNetwork.getRecentMedia(accessToken)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
