@@ -370,6 +370,12 @@ gridView.setAdapter(adapter);
 
 `subscribeOn(Schedulers.newThread())`はAPI通信をバックグラウンドで行うための設定で、`observeOn(AndroidSchedulers.mainThread())`はメインスレッドに結果をコールバックするための設定です。
 
+さいごに`AndroidManifest`にインターネット通信を許可するための設定を追加してください。
+
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
 ここまででアプリを起動すると、認証ボタンが表示されて、認証を行うと自分が投稿した画像一覧が表示されるはずです。
 
 ## 画像の拡大表示
