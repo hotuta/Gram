@@ -82,6 +82,9 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    
+    // Image
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 ```
 
