@@ -224,7 +224,7 @@ public class InstagramNetwork {
 
 APIからのデータ取得処理が実装できたので、次は画面に表示する部分を実装していきます。
 
-現状の`activity_main.xml`には認証のためのボタンのみが設置されていますが、画像を一覧表示するための`GridView`を追加で設置します。
+現状の`activity_main`には認証のためのボタンのみが設置されていますが、画像を一覧表示するための`GridView`を追加で設置します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -254,6 +254,8 @@ APIからのデータ取得処理が実装できたので、次は画面に表�
 
 </RelativeLayout>
 ```
+
+`GridView`に設定するレイアウトを`item_instagram_grid_view`として作成します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
